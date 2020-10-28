@@ -1,0 +1,26 @@
+.body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  font-family: "Lucida Console", Courier, monospace;
+  background-color: grey;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.subHeader {
+  display: flex;
+  justify-content: center;
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+.comic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
