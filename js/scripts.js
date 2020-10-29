@@ -134,6 +134,7 @@ function playSecondJumpScare() {
 
 function handler(entries) {
   for (entry of entries) {
+    console.log('entry', entry)
     if (
       entry.target.id === 'firstTarget'
       && entry.isIntersecting
