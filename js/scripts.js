@@ -1,10 +1,11 @@
-const clicksound = new Audio('audio/spookyclick.mp3');
+const clickSound = new Audio('audio/spookyclick.mp3');
+const screamSound = new Audio('audio/spookyscream.mp3');
 let firstJumpScareActivated = false;
 let secondJumpScareActivated = false;
 
 function playFirstJumpScare() {
   setTimeout(() => {
-    clicksound.play();
+    clickSound.play();
     window.scrollTo(0, 8441);
   }, 800)
 
@@ -67,10 +68,72 @@ function playFirstJumpScare() {
   firstJumpScareActivated = true;
 }
 
+function playSecondJumpScare() {
+  setTimeout(() => {
+    screamSound.play();
+    window.scrollTo(0, 24988);
+  }, 800)
+
+  setTimeout(() => {
+    screamSound.play();
+    window.scrollTo(0, 25727);
+  }, 900)
+
+  setTimeout(() => {
+    screamSound.play();
+    window.scrollTo(0, 26414);
+  }, 1000)
+
+  setTimeout(() => {
+    screamSound.play();
+    window.scrollTo(0, 27094);
+  }, 1100)
+
+  setTimeout(() => {
+    screamSound.play();
+    window.scrollTo(0, 27799);
+  }, 1200)
+
+  setTimeout(() => {
+    screamSound.play();
+    window.scrollTo(0, 28666);
+  }, 1300)
+
+  setTimeout(() => {
+    screamSound.play();
+    window.scrollTo(0, 27799);
+  }, 1400)
+
+  setTimeout(() => {
+    screamSound.play();
+    window.scrollTo(0, 28666);
+  }, 1500)
+
+  setTimeout(() => {
+    screamSound.play();
+    window.scrollTo(0, 27799);
+  }, 1600)
+
+  setTimeout(() => {
+    screamSound.play();
+    window.scrollTo(0, 28666);
+  }, 1700)
+
+  setTimeout(() => {
+    screamSound.play();
+    window.scrollTo(0, 27799);
+  }, 1800)
+
+  setTimeout(() => {
+    screamSound.play();
+    window.scrollTo(0, 28666);
+  }, 1900)
+
+  secondJumpScareActivated = true;
+}
+
 function handler(entries) {
   for (entry of entries) {
-    console.log('entry', entry.target.id);
-
     if (
       entry.target.id === 'firstTarget'
       && entry.isIntersecting
@@ -84,7 +147,7 @@ function handler(entries) {
       && entry.isIntersecting
       && !secondJumpScareActivated
     ) {
-      console.log('activate second jump scare')
+      playSecondJumpScare();
     }
   }
 }
