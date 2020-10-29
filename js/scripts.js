@@ -1,5 +1,6 @@
 const clicksound = new Audio('audio/spookyclick.mp3');
 let firstJumpScareActivated = false;
+let secondJumpScareActivated = false;
 
 function playFirstJumpScare() {
   setTimeout(() => {
@@ -68,10 +69,22 @@ function playFirstJumpScare() {
 
 function handler(entries) {
   for (entry of entries) {
-    console.log('entry', entry);
+    console.log('entry', entry.target.id);
 
-    if (entry.isIntersecting && !firstJumpScareActivated) {
+    if (
+      entry.target.id === 'firstTarget'
+      && entry.isIntersecting
+      && !firstJumpScareActivated
+    ) {
       playFirstJumpScare();
+    }
+
+    if (
+      entry.target.id === 'secondTarget'
+      && entry.isIntersecting
+      && !secondJumpScareActivated
+    ) {
+      console.log('activate second jump scare')
     }
   }
 }
@@ -82,3 +95,4 @@ function emojiClickChange() {
 
 let observer = new IntersectionObserver(handler);
 observer.observe(document.getElementById('firstTarget'));
+observer.observe(document.getElementById('secondTarget'));
