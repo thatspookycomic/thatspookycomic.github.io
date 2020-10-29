@@ -24,3 +24,20 @@
   justify-content: center;
   align-items: center;
 }
+
+#clickEmoji {
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
+  padding-bottom: 20px;
+}
+
+#clickEmoji:hover {
+  cursor: pointer;
+}
+
+.followText {
+  display: flex;
+  justify-content: center;
+  font-family: "Lucida Console", Courier, monospace;
+}
