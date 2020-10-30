@@ -158,5 +158,8 @@ function emojiClickChange() {
 }
 
 let observer = new IntersectionObserver(handler);
-observer.observe(document.getElementById('firstTarget'));
-observer.observe(document.getElementById('secondTarget'));
+setTimeout(() => {
+  observer.observe(document.getElementById('firstTarget'));
+  observer.observe(document.getElementById('secondTarget'));
+}, 1000)
+
