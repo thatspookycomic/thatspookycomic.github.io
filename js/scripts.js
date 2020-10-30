@@ -161,5 +161,5 @@ let observer = new IntersectionObserver(handler);
 setTimeout(() => {
   observer.observe(document.getElementById('firstTarget'));
   observer.observe(document.getElementById('secondTarget'));
-}, 1000)
+}, 3000)
 
